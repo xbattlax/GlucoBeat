@@ -97,6 +97,7 @@ export default function App() {
       </Icon>
     </SuiBox>
   );
+
   if (!token){
     return (<ThemeProvider theme={theme}>
       <CssBaseline />
