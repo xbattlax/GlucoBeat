@@ -27,9 +27,13 @@ export default function App() {
   }, [pathname]);
 
 
+  const orange = "#FF8811";
+  const bleu = "#155A96";
+  const vert = "#0D7B25";
+
 
   if (dev){
-    return (<Card></Card>)
+    return (<Card content="card" color={orange}></Card>)
   }
 
 }
