@@ -23,7 +23,11 @@ import { useSoftUIController, setMiniSidenav, setOpenConfigurator } from "contex
 import brand from "assets/images/logo-ct.png";
 import SignIn from "./layouts/authentication/sign-in";
 
+
+import Card from "./components/card";
+
 export default function App() {
+  const dev = true;
   const [token, setToken] = useState();
   const [controller, dispatch] = useSoftUIController();
   const { miniSidenav, direction, layout, openConfigurator, sidenavColor } = controller;
@@ -97,6 +101,9 @@ export default function App() {
       </Icon>
     </SuiBox>
   );
+  if (dev){
+    <Card></Card>
+  }
   if (!token){
     return (<ThemeProvider theme={theme}>
       <CssBaseline />
