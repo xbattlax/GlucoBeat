@@ -1,3 +1,9 @@
+:root{
+  --color-white: #FFFFF;
+}
+
+
+
 .App {
   text-align: center;
 }
@@ -26,6 +32,11 @@
 
 .App-link {
   color: #61dafb;
+}
+
+.card {
+  padding: 10px;
+  color: var(--color-white);
 }
 
 @keyframes App-logo-spin {
