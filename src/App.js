@@ -10,8 +10,11 @@ import { Routes, Route, Navigate, useLocation } from "react-router-dom";
 //import routes from "./routes";
 
 
-import Card from "./components/card";
-import HeaderDash from "./components/headerDash";
+import Card from "./components/Card";
+import HeaderDash from "./components/HeaderDash";
+import Navbar from "./components/Navbar";
+import Dashboard from "./pages/Dashboard";
+
 import zigzag from './images/zigzag.png';
 
 export default function App() {
@@ -35,16 +38,7 @@ export default function App() {
 
   if (dev){
     return (
-      <>
-        <HeaderDash name="Damien"></HeaderDash>
-        <Card 
-        img="true" 
-        src={zigzag} 
-        color={orange}
-        chiffre="96"
-        ></Card>
-        
-      </>
+        <Dashboard></Dashboard>
     );
 
   }

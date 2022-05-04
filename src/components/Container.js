@@ -1,5 +1,4 @@
 import "../App.css"
-import "./css/Card.css"
 import Card from "./components/card";
 
 const Container = (props) => {

@@ -1,8 +1,3 @@
-@font-face {
-    font-family: Nunito-light;
-    src: url(../../font/Nunito_Sans/NunitoSans-Light.ttf);
-}
-
 .card {
     color: #FFFF;
     padding: 2rem 1rem;
@@ -18,7 +13,6 @@
 }
 
 .cardText p{
-    font-family: Nunito-light;
     margin: 0;
     font-size: 3.5em;
 }

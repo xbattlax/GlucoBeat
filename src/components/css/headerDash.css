@@ -3,6 +3,11 @@
     justify-content: space-between;
 }
 
+.icone{
+    border: none;
+    background: transparent;
+}
+
 .text p,h1{
     margin: 0;
 }
