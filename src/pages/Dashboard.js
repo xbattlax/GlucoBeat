@@ -1,7 +1,7 @@
 //components
 import Card from "../components/Card";
 import HeaderDash from "../components/HeaderDash";
-import Navbar from "../components/Navbar";
+import Navbar from "../components/navbar/Navbar";
 
 //Images
 import zigzag from '../images/zigzag.png';
@@ -13,6 +13,7 @@ const vert = "#0D7B25";
 
 
 const Dashboard = () => {
+    return(
     <>
         <HeaderDash name="Damien"></HeaderDash>
         <Card 
@@ -23,5 +24,7 @@ const Dashboard = () => {
         ></Card>
         <Navbar></Navbar>
     </>
+    )
+    
 };
 export default Dashboard;

@@ -1,5 +1,23 @@
 .navbar{
+    margin: 0;
     position: fixed;
     bottom: 0;
+    width: calc(100% - 2rem);
 }
 
+.navbar ul{
+    margin-top: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar li{
+    height: 30px;
+    margin-top: 15px;
+}
+
+.navbar ul :nth-child(3n){
+    margin-top: 0;
+}

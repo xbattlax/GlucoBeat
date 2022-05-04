@@ -12,7 +12,7 @@ import { Routes, Route, Navigate, useLocation } from "react-router-dom";
 
 import Card from "./components/Card";
 import HeaderDash from "./components/HeaderDash";
-import Navbar from "./components/Navbar";
+import Navbar from "./components/navbar/Navbar";
 import Dashboard from "./pages/Dashboard";
 
 import zigzag from './images/zigzag.png';
@@ -38,7 +38,7 @@ export default function App() {
 
   if (dev){
     return (
-        <Dashboard></Dashboard>
+      <Dashboard></Dashboard>
     );
 
   }
