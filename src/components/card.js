@@ -2,11 +2,25 @@ import "../App.css"
 import "./css/Card.css"
 
 const Card = (props) => {
-    return(
-        <div className="card" style={{backgroundColor: props.color}}>
-            <p>{props.content}</p>
-        </div>
-    );
+    if (props.img === "true"){
+        return(
+            <div className="card" style={{backgroundColor: props.color}}>
+                <div className="cardText">
+                    <p>{props.chiffre}</p>
+                    <p>g/L</p>
+                </div>
+                <img className="img" src={props.src} alt={props.alt}></img>
+            </div>
+        );
+        }else{
+        return(
+            <div className="card" style={{backgroundColor: props.color}}></div>
+        );
+    }
+    
 };
+Card.defaultProps = {
+    alt: "Image"
+  }   
 
 export default Card;

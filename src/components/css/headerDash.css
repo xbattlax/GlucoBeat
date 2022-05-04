@@ -2,3 +2,7 @@
     display: flex;
     justify-content: space-between;
 }
+
+.text p,h1{
+    margin: 0;
+}

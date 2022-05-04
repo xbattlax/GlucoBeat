@@ -1,5 +1,6 @@
 :root{
-  --color-white: #FFFFF;
+  --color-white: #FFFFFF;
+  --text-dark: #253141;
 }
 @font-face {
   font-family: Nunito;
@@ -8,6 +9,10 @@
 
 body{
   font-family: Nunito;
+  color: var(--text-dark);
+  max-width: 100vw;
+  padding: 1rem;
+  margin: 0;
 }
 
 
