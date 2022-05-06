@@ -1,0 +1,19 @@
+.imgContainer{
+    background-image: url('../../images/bowl.png');
+    background-size: contain;
+    border-radius: 1rem;
+    width: 100%;
+    padding-top: 100%;
+    box-sizing: border-box;
+    background-repeat: no-repeat;
+}
+
+.recetteTitle{
+    color: #0D7B25;
+    text-decoration: underline;
+}
+
+.recetteTitle svg{
+    padding-right: 5px;
+    padding-bottom: 2px;
+}

@@ -4,7 +4,10 @@ import "../css/navbar.css"
 
 const NavIcone = (props) => {
     return(
-        <img className="navIcone" src={props.src} alt="Icone menu"></img>
+        <>
+            <img className="navIcone" src={props.src} alt="Icone menu"></img>
+            <p>{props.navText}</p>
+        </>
     )
     
 };

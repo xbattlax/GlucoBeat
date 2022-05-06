@@ -14,13 +14,18 @@ const Card = (props) => {
         );
         }else{
         return(
-            <div className="card" style={{backgroundColor: props.color}}></div>
+            <div className="card" style={{backgroundColor: props.color}}>
+                <div className="cardText">
+                    <p>{props.txt}</p>
+                </div>
+            </div>
         );
     }
     
 };
 Card.defaultProps = {
-    alt: "Image"
+    alt: "Image",
+    img: "false"
   }   
 
 export default Card;

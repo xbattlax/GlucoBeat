@@ -2,7 +2,15 @@
     margin: 0;
     position: fixed;
     bottom: 0;
-    width: calc(100% - 2rem);
+    width: 100%;
+    background-color: #FFFF;
+    box-shadow: 0px 0px 11px 3px rgba(105,105,105,0.5);
+    height: 65px;
+    padding-top: 5px;
+    bottom:0;
+	left:0;
+	right:0;
+	z-index:1000;
 }
 
 .navbar ul{
@@ -10,12 +18,18 @@
     padding: 0;
     list-style: none;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 .navbar li{
-    height: 30px;
-    margin-top: 15px;
+    text-align: center;
+    height: 40px;
+    margin-top: 10px;
+}
+
+.navbar li p{
+    margin: 0;
+    font-size: small;
 }
 
 .navbar ul :nth-child(3n){

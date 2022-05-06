@@ -1,11 +1,18 @@
 import "../App.css"
-import Card from "./components/card";
+import Card from "./Card";
 
 const Container = (props) => {
     return(
         <>
-            <h1>{props.title}</h1>
-            <Card></Card>
+            <h3>{props.title}</h3>
+            <Card
+                img={props.img}
+                color={props.color}
+                chiffre={props.chiffre}
+                src={props.src}
+                alt={props.alt}
+                txt={props.txt}
+            ></Card>
         </>
     );
 };

@@ -14,6 +14,8 @@ import Card from "./components/Card";
 import HeaderDash from "./components/HeaderDash";
 import Navbar from "./components/navbar/Navbar";
 import Dashboard from "./pages/Dashboard";
+import Recettes from "./pages/Recettes";
+
 
 import zigzag from './images/zigzag.png';
 
@@ -36,9 +38,9 @@ export default function App() {
 
   
 
-  if (dev){
+  if (dev){ 
     return (
-      <Dashboard></Dashboard>
+      <Recettes></Recettes>
     );
 
   }

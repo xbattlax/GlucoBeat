@@ -13,11 +13,11 @@ const Navbar = () => {
     return(
         <div className="navbar">
             <ul>
-                <li><NavIcone src={maison}></NavIcone></li>
-                <li><NavIcone src={calendar}></NavIcone></li>
+                <li><NavIcone src={maison} navText="Accueil"></NavIcone></li>
+                <li><NavIcone src={calendar} navText="RDV"></NavIcone></li>
                 <li><NavIcone src={add}></NavIcone></li>
-                <li><NavIcone src={egg}></NavIcone></li>
-                <li><NavIcone src={person}></NavIcone></li>
+                <li><NavIcone src={egg} navText="Recettes"></NavIcone></li>
+                <li><NavIcone src={person} navText="Profil"></NavIcone></li>
             </ul>
         </div>
     
