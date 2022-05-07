@@ -1,5 +1,5 @@
 import "../App.css"
-import "./css/card.css"
+import "./css/Card.css"
 
 const Card = (props) => {
     if (props.img === "true"){
