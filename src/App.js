@@ -33,8 +33,8 @@ export default function App() {
 
 
   const orange = "#FF8811";
-  const bleu = "#155A96";
-  const vert = "#0D7B25";
+  const blue = "#1C6BA4";
+  const green = "#0D7B25";
 
   
 

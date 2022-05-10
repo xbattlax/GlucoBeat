@@ -19,7 +19,7 @@ const Dashboard = () => {
         <HeaderDash name="Damien"></HeaderDash>
         <Container
             title="Votre taux de glucose :"
-            img="true" 
+            content="img,txt" 
             src={zigzag} 
             color={orange}
             chiffre="96"
@@ -27,7 +27,7 @@ const Dashboard = () => {
         </Container>
         <Container
             title="Votre taux de glucose :"
-            img="False" 
+            content="txt" 
             color={blue}
             txt="Graphe du taux de glucose"
         >

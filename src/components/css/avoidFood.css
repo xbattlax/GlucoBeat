@@ -1,0 +1,9 @@
+.container{
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.container p{
+    font-size: .8rem;
+}
