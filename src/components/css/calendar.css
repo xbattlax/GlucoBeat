@@ -1,0 +1,11 @@
+.calendar{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.sdp{
+    width: 100% !important;
+    --shadow: none !important;
+    --theme-color: #FF8811 !important;
+}

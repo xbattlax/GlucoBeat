@@ -4,7 +4,7 @@ import NavIcone from "./NavIcone";
 
 //svg
 import maison from "../../images/Maison.svg"
-import calendar from "../../images/calendar-event.svg"
+import calendar from "../../images/burger.png"
 import add from "../../images/plus-circle-fill.svg"
 import egg from "../../images/egg.svg"
 import person from "../../images/person.svg"

@@ -1,7 +1,9 @@
 //components
 import Container from "../components/Container";
+import GrapheGlucose from "../components/GrapheGlucose";
 import HeaderDash from "../components/HeaderDash";
 import Navbar from "../components/navbar/Navbar";
+import TauxGlucose from "../components/TauxGlucose";
 
 
 //Images
@@ -17,21 +19,21 @@ const Dashboard = () => {
     return(
     <>
         <HeaderDash name="Damien"></HeaderDash>
-        <Container
+        <TauxGlucose
             title="Votre taux de glucose :"
-            content="img,txt" 
+            content="cardDash" 
             src={zigzag} 
             color={orange}
             chiffre="96"
         >
-        </Container>
-        <Container
+        </TauxGlucose>
+        <GrapheGlucose
             title="Votre taux de glucose :"
             content="txt" 
             color={blue}
             txt="Graphe du taux de glucose"
         >
-        </Container>
+        </GrapheGlucose>
 
         <Navbar></Navbar>
     </>

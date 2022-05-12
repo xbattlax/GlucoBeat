@@ -3,7 +3,7 @@ import "./css/headerDash.css"
 
 const HeaderDash = (props) => {
     return(
-        <div className="header">
+        <div className="headerDash">
             <div className="text">
                 <p>Bonjour,</p>
                 <h1>{props.name}</h1>

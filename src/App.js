@@ -18,6 +18,7 @@ import Recettes from "./pages/Recettes";
 
 
 import zigzag from './images/zigzag.png';
+import RDV from "./pages/RDV";
 
 export default function App() {
   const dev = true;
@@ -40,7 +41,7 @@ export default function App() {
 
   if (dev){ 
     return (
-      <Recettes></Recettes>
+      <Dashboard></Dashboard>
     );
 
   }

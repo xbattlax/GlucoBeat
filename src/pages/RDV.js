@@ -1,7 +1,8 @@
 //components
 import Container from "../components/Container";
-import HeaderDash from "../components/HeaderDash";
+import Header from "../components/Header";
 import Navbar from "../components/navbar/Navbar";
+import Calendar from "../components/Calendar";
 
 //calendar
 import DatePicker from 'sassy-datepicker';
@@ -21,8 +22,8 @@ const RDV = () => {
     };
     return(
     <>
-        <HeaderDash name="Damien"></HeaderDash>
-        <DatePicker onChange={onChange} />
+        <Header pageName="Mes rendez-vous"></Header>
+        <Calendar></Calendar>
         <Navbar></Navbar>
     </>
     )
