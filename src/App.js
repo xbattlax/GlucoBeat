@@ -41,7 +41,12 @@ export default function App() {
 
   if (dev){ 
     return (
-      <Dashboard></Dashboard>
+        <div className="App">
+          <Routes>
+            <Route path="/" element={ <Dashboard/> } />
+            <Route path="recettes" element={ <Recettes/> } />
+          </Routes>
+        </div>
     );
 
   }
