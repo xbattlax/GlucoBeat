@@ -21,16 +21,16 @@ import Dashboard from "../../pages/Dashboard"
 import Recettes from "../../pages/Recettes"
 
 const Navbar = () => {
-    const [currentPage, setCurrentPage] = React.useState("/")
+    //const [currentPage, setCurrentPage] = React.useState("/")
 
     return(
             <div className="navbar">
                 <nav>
                 <ul>
-                    <li><Link to="/" onClick={(setCurrentPage("/"))} ><NavIcone src={maison} navText="Accueil"></NavIcone></Link></li>
+                    <li><Link to="/"  ><NavIcone src={maison} navText="Accueil"></NavIcone></Link></li>
                     <li><NavIcone src={calendar} navText="RDV"></NavIcone></li>
                     <li><NavIcone src={add}></NavIcone></li>
-                    <li><Link to="/recettes" onClick={(setCurrentPage("recettes"))}><NavIcone src={egg} navText="Recettes"></NavIcone></Link></li>
+                    <li><Link to="/recettes" ><NavIcone src={egg} navText="Recettes"></NavIcone></Link></li>
                     <li><NavIcone src={person} navText="Profil"></NavIcone></li>
                 </ul>
                 </nav>
