@@ -10,16 +10,21 @@ import "../../App.css"
 import "../css/navbar.css"
 import NavIcone from "./NavIcone";
 
+
+
+
 //svg
-import maison from "../../images/Maison.svg"
-import calendar from "../../images/calendar-event.svg"
-import add from "../../images/plus-circle-fill.svg"
-import egg from "../../images/egg.svg"
-import person from "../../images/person.svg"
+import { BsHouse } from "react-icons/bs";
+import { BsCalendarEvent } from "react-icons/bs";
+import { BsEgg } from "react-icons/bs";
+import { BsPerson } from "react-icons/bs";
 
 import Dashboard from "../../pages/Dashboard"
 import Recettes from "../../pages/Recettes"
 
+
+const orange = "#FF8811";
+const dark = "##253141"
 const Navbar = () => {
     //const [currentPage, setCurrentPage] = React.useState("/")
 
@@ -27,11 +32,30 @@ const Navbar = () => {
             <div className="navbar">
                 <nav>
                 <ul>
-                    <li><Link className="link" to="/"  ><NavIcone src={maison} navText="Accueil"></NavIcone></Link></li>
-                    <li><Link className="link" to="/RDV"><NavIcone src={calendar} navText="RDV"></NavIcone></Link></li>
-                    <li><NavIcone src={add}></NavIcone></li>
-                    <li><Link className="link" to="/recettes" ><NavIcone src={egg} navText="Recettes"></NavIcone></Link></li>
-                    <li><NavIcone src={person} navText="Profil"></NavIcone></li>
+                    <li>
+                        <Link className="link" to="/"  >
+                            <BsHouse color={dark} size="1.7rem"></BsHouse>
+                            <p>Accueil</p>
+                        </Link>
+                    </li>
+                    <li>
+                        <Link className="link" to="/RDV">
+                            <BsCalendarEvent color="dark" size="1.7rem"></BsCalendarEvent>
+                            <p>RDV</p>
+                        </Link>
+                    </li>
+                    <li>
+                        <Link className="link" to="/recettes">
+                            <BsEgg color="dark" size="1.7rem"></BsEgg>
+                            <p>Recettes</p>
+                        </Link>
+                    </li>
+                    <li>
+                        <Link className="link" to="/profil">
+                            <BsPerson color="dark" size="1.7rem"></BsPerson>
+                            <p>Profil</p>
+                        </Link>
+                    </li>
                 </ul>
                 </nav>
             </div>
