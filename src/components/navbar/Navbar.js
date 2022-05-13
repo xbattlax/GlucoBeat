@@ -20,9 +20,22 @@ import person from "../../images/person.svg"
 import Dashboard from "../../pages/Dashboard"
 import Recettes from "../../pages/Recettes"
 
-const Navbar = () => {
+const Navbar = (props) => {
     //const [currentPage, setCurrentPage] = React.useState("/")
+    icons = {
+        name : "Home" : {icon : <Test/>, link : "/", color: "black"},
+        name : "Recettes" : {icon : <Test/>, link : "/recettes", color: "black"},
 
+    }
+    switch (props.isActive){
+        case "Home":
+            break;
+        case "Recettes":
+            break;
+        default:
+            break;
+
+    }
     return(
             <div className="navbar">
                 <nav>

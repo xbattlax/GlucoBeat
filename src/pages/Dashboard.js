@@ -58,7 +58,6 @@ const Dashboard = () => {
         return () => true;
     }, []);
 
-    console.log(taux);
     return(
     <>
         <HeaderDash name="Damien"></HeaderDash>
@@ -79,7 +78,7 @@ const Dashboard = () => {
         >
         </GrapheGlucose>
 
-        <Navbar></Navbar>
+        <Navbar location={"Home"}></Navbar>
     </>
     )
     

@@ -20,7 +20,7 @@ const Recettes = () => {
         <Header pageName="Recettes"></Header>
         <RecetteImg></RecetteImg>
         <AvoidFood></AvoidFood>
-        <Navbar></Navbar>
+        <Navbar location ="Recettes"></Navbar>
     </>
     )
     
