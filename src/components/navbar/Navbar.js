@@ -17,7 +17,6 @@ import Recettes from "../../pages/Recettes";
 const Navbar = (props) => {
   const orange = "#FF8811";
   const dark = "##253141";
-  const Navbar = () => {
     const icons = [
       {
         name: "Home",
@@ -56,7 +55,8 @@ const Navbar = (props) => {
         },
       },
     ];
-    switch (props.isActive) {
+    console.log(icons)
+    switch (props.location) {
       case "Home":
         icons[0].values.icon= <BsHouse color={orange}/>;
         break;
@@ -90,6 +90,5 @@ const Navbar = (props) => {
         </nav>
       </div>
     );
-  };
 };
 export default Navbar;

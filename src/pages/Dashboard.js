@@ -78,7 +78,7 @@ const Dashboard = () => {
         >
         </GrapheGlucose>
 
-        <Navbar location={"Home"}></Navbar>
+        <Navbar location="Home"></Navbar>
     </>
     )
     
