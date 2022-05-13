@@ -55,7 +55,6 @@ const Navbar = (props) => {
         },
       },
     ];
-    console.log(icons.length)
     switch (props.location) {
       case "Home":
         icons[0].value.icon= <BsHouse color={orange}/>;
