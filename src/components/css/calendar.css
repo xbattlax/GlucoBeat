@@ -9,3 +9,7 @@
     --shadow: none !important;
     --theme-color: #FF8811 !important;
 }
+
+.sdp :focus{
+    border: none !important;
+}
