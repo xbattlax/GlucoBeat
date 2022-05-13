@@ -1,19 +1,20 @@
 import "../App.css"
-import "./css/card.css"
-import { LineChart, Line, Legend, Tooltip, XAxis } from 'recharts';
+import "./css/grapheGlucose.css"
+import { LineChart, Line, Legend, Tooltip, XAxis,CartesianGrid, ResponsiveContainer, YAxis } from 'recharts';
 
 const GrapheGlucose = (props) => {
 
     return(
         <div className="card" style={{backgroundColor: props.color}}>
-            <div className="cardText">
-                <LineChart width={400} height={400} data={props.data}>
-                    <XAxis dataKey="name" />
+            <ResponsiveContainer width="100%" height={250}>
+                <LineChart className="graphe" data={props.data}>
+                    <CartesianGrid  horizontal="true" vertical=""/>
+                    <YAxis dataKey="taux" tick={{fill: "#fff"}} ></YAxis>
                     <Legend />
                     <Tooltip content={<CustomTooltip/>}/>
-                    <Line type="monotone" dataKey="taux" label="name" stroke="#8884d8" />
+                    <Line type="monotone" dataKey="taux" label="name" stroke="#fff" strokeWidth={2} />
                 </LineChart>
-            </div>
+            </ResponsiveContainer>
         </div>
     );
 };

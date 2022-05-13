@@ -1,0 +1,8 @@
+.container{
+    padding: .5rem;
+    width: 100%;
+}
+
+.graphe svg{
+    margin-left: -25px;
+}

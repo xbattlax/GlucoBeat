@@ -11,12 +11,9 @@
 .cardText{
     display: flex;
     align-items: center;
+    font-size: 2rem;
 }
 
-.cardText p{
-    margin: 0;
-    font-size: 3.5em;
-}
 
 .cardText :nth-child(2n){
     font-size: 1rem;

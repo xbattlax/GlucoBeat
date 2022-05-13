@@ -24,13 +24,13 @@ const Navbar = (props) => {
           link: "/",
           color: "black",
           text: "Acceuil",
-          icon: <BsHouse color="black"/>
+          icon: <BsHouse size="1.7rem" color="black"/>
         },
       },
       {
         name: "Recettes",
         value: {
-          icon: <BsEgg color="black"/>,
+          icon: <BsEgg size="1.7rem" color="black"/>,
           link: "/recettes",
           color: "black",
           text: "Recettes",
@@ -39,7 +39,7 @@ const Navbar = (props) => {
       {
         name: "RDV",
         value: {
-          icon: <BsCalendarEvent color="black"/>,
+          icon: <BsCalendarEvent size="1.7rem" color="black"/>,
           link: "/RDV",
           color: "black",
           text: "RDV",
@@ -48,7 +48,7 @@ const Navbar = (props) => {
       {
         name: "Profil",
         value: {
-          icon: <BsPerson color="black"/>,
+          icon: <BsPerson size="1.7rem" color="black"/>,
           link: "/profil",
           color: "black",
           text: "Profil",
@@ -57,13 +57,13 @@ const Navbar = (props) => {
     ];
     switch (props.location) {
       case "Home":
-        icons[0].value.icon= <BsHouse color={orange}/>;
+        icons[0].value.icon= <BsHouse size="1.7rem" color={orange}/>;
         break;
       case "Recettes":
-        icons[1].value.icon= <BsEgg color={orange}/>;
+        icons[1].value.icon= <BsEgg size="1.7rem" color={orange}/>;
         break;
         case "RDV":
-        icons[2].value.icon= <BsCalendarEvent color={orange}/>;
+        icons[2].value.icon= <BsCalendarEvent size="1.7rem" color={orange}/>;
       default:
         break;
     }
