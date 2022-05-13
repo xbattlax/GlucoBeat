@@ -3,6 +3,12 @@ import "../css/navbar.css"
 import React, { useState,useEffect } from 'react';
 import BiHouse from "./icones/BiHouse";
 
+
+import { BsHouse } from "react-icons/bs";
+import { BsCalendarEvent } from "react-icons/bs";
+import { BsEgg } from "react-icons/bs";
+import { BsPerson } from "react-icons/bs";
+
 const orange = "#FF8811";
 const dark = "##253141"
 
@@ -12,8 +18,8 @@ const NavIcone = (props) => {
         return(
             <>
                 {/* <use href={props.src} style={props.color}></use> */}
-                <BiHouse color={orange}></BiHouse>
-                <p>{props.navText}</p>
+                <props.obj.value.icon color={props.obj.value.color}></props.obj.value.icon>
+                <p></p>
             </>
         )
     // }
