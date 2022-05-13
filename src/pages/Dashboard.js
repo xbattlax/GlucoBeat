@@ -5,6 +5,7 @@ import HeaderDash from "../components/HeaderDash";
 import Navbar from "../components/navbar/Navbar";
 import TauxGlucose from "../components/TauxGlucose";
 import moment from "moment-timezone";
+import { LineChart, Line } from 'recharts';
 
 import React, { useState,useEffect } from 'react';
 
@@ -35,7 +36,7 @@ const Dashboard = () => {
             .then(response => response.json())
             .then(data => setGlucose(Math.round(data.data[0].taux)));
 
-        var targetDate = moment().tz("Europe/Paris").subtract(1, "days").format("YYYY-MM-DD HH:mm");
+        var targetDate = moment().tz("Europe/Paris").subtract(3, "hours").format("YYYY-MM-DD HH:mm");
 
         const requestOptions2 = {
             method: 'POST',
@@ -48,12 +49,16 @@ const Dashboard = () => {
         };
         fetch('http://13.38.46.102/get_glucose_records', requestOptions2)
             .then(response => response.json())
-            .then(data => setTaux(data.data.map(taux => Math.round(taux.taux))));
+            .then(data => setTaux(data.data.map(
+                taux => ({
+                            name: moment(taux.created_at).utc().format("HH:mm"),
+                                taux: Math.round(taux.taux)
+                }))));
 
         return () => true;
     }, []);
 
-
+    console.log(taux);
     return(
     <>
         <HeaderDash name="Damien"></HeaderDash>
@@ -70,6 +75,7 @@ const Dashboard = () => {
             content="txt" 
             color={blue}
             txt="Graphe du taux de glucose"
+            data={taux}
         >
         </GrapheGlucose>
 
