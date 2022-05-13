@@ -45,6 +45,7 @@ export default function App() {
           <Routes>
             <Route path="/" element={ <Dashboard/> } />
             <Route path="recettes" element={ <Recettes/> } />
+            <Route path="RDV" element={ <RDV/> } />
           </Routes>
         </div>
     );

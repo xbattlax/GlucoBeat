@@ -14,6 +14,7 @@ import SpaceShip from "examples/Icons/SpaceShip";
 import CustomerSupport from "examples/Icons/CustomerSupport";
 import CreditCard from "examples/Icons/CreditCard";
 import Cube from "examples/Icons/Cube";
+import RDV from "./pages/RDV";
 
 const routes = [
   {
@@ -32,6 +33,15 @@ const routes = [
     route: "/recettes",
     icon: "egg.svg",
     component: <Recettes />,
+    noCollapse: true,
+  },
+  {
+    type: "collapse",
+    name: "RDV",
+    key: "RDV",
+    route: "/RDV",
+    icon: "calendar-events.svg",
+    component: <RDV />,
     noCollapse: true,
   },
 
