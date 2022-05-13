@@ -55,14 +55,16 @@ const Navbar = (props) => {
         },
       },
     ];
-    console.log(icons)
+    console.log(icons.length)
     switch (props.location) {
       case "Home":
-        icons[0].values.icon= <BsHouse color={orange}/>;
+        icons[0].value.icon= <BsHouse color={orange}/>;
         break;
       case "Recettes":
-        icons[1].values.icon= <BsHouse color={orange}/>;
+        icons[1].value.icon= <BsEgg color={orange}/>;
         break;
+        case "RDV":
+        icons[2].value.icon= <BsCalendarEvent color={orange}/>;
       default:
         break;
     }
@@ -70,18 +72,14 @@ const Navbar = (props) => {
       <div className="navbar">
         <nav>
           <ul>
-            <li>
-                <Link to="/">
-                <BsHouse color={orange}/>
-                </Link>
-            </li>
 
 
             {icons.map((icon, index) => (
                 <li>
-                    <Link to={icon.value.link}/>
+                    <Link to={icon.value.link}>
                     {icon.value.icon}
                     <p>{icon.name}</p>
+                    </Link>
                 </li>
                 ))
 

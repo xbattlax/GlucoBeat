@@ -24,7 +24,7 @@ const RDV = () => {
     <>
         <Header pageName="Mes rendez-vous"></Header>
         <Calendar></Calendar>
-        <Navbar></Navbar>
+        <Navbar location="RDV"></Navbar>
     </>
     )
     
