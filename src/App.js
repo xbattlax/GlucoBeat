@@ -9,16 +9,11 @@ import { Routes, Route, Navigate, useLocation } from "react-router-dom";
 
 //import routes from "./routes";
 
-
-import Card from "./components/Card";
-import HeaderDash from "./components/HeaderDash";
-import Navbar from "./components/navbar/Navbar";
 import Dashboard from "./pages/Dashboard";
 import Recettes from "./pages/Recettes";
-
-
-import zigzag from './images/zigzag.png';
 import RDV from "./pages/RDV";
+import Connexion from "./pages/connexion";
+
 
 export default function App() {
   const dev = true;
@@ -43,6 +38,7 @@ export default function App() {
     return (
         <div className="App">
           <Routes>
+            <Route path="connexion" element={ <Connexion/> } />
             <Route path="/" element={ <Dashboard/> } />
             <Route path="recettes" element={ <Recettes/> } />
             <Route path="RDV" element={ <RDV/> } />

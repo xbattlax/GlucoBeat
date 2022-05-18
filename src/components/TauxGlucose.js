@@ -8,7 +8,7 @@ const TauxGlucose = (props) => {
                 <p>{props.chiffre}</p>
                 <p>g/L</p>
             </div>
-            <img src={props.src} alt={props.alt}></img>
+            <img src={props.src} alt={props.alt} width="150" height="110"></img>
         </div>
     );
 };
