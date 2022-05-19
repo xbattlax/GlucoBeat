@@ -32,7 +32,7 @@ const Dashboard = () => {
                 "date": date
             })
         };
-        fetch('http://13.38.46.102/get_recent_glucose_record', requestOptions)
+        fetch('http://13.38.46.86/get_recent_glucose_record', requestOptions)
             .then(response => response.json())
             .then(data => setGlucose(Math.round(data.data[0].taux)));
 
@@ -47,7 +47,7 @@ const Dashboard = () => {
                 "dateNow": date
             })
         };
-        fetch('http://13.38.46.102/get_glucose_records', requestOptions2)
+        fetch('http://13.38.46.86/get_glucose_records', requestOptions2)
             .then(response => response.json())
             .then(data => setTaux(data.data.map(
                 taux => ({
