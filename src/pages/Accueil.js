@@ -5,7 +5,6 @@ import Navbar from "../components/navbar/Navbar";
 import ImgConnexion from "../components/ImgConnexion";
 import Button from "../components/Button";
 import TextConnexion from "../components/TextConnexion";
-import FormConnexion from "../components/FormConnexion";
 
 
 
@@ -18,15 +17,16 @@ const blue = "#155A96";
 const green = "#9FD2AA";
 
 
-const Connexion = () => {
+const Accueil = () => {
     
     return(
     <>
         <HeaderConnexion></HeaderConnexion>
         <ImgConnexion></ImgConnexion>
-        <FormConnexion></FormConnexion>
+        <Button color = "orange" text = "Connexion"></Button>
+        <Button color = "green" text = "Inscription"></Button>
         <TextConnexion ></TextConnexion>
     </>
     )
 };
-export default Connexion;
+export default Accueil;

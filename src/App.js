@@ -12,7 +12,8 @@ import { Routes, Route, Navigate, useLocation } from "react-router-dom";
 import Dashboard from "./pages/Dashboard";
 import Recettes from "./pages/Recettes";
 import RDV from "./pages/RDV";
-import Connexion from "./pages/connexion";
+import Accueil from "./pages/Accueil.js";
+import Connexion from "./pages/Connexion.js";
 
 
 export default function App() {
@@ -38,7 +39,8 @@ export default function App() {
     return (
         <div className="App">
           <Routes>
-            <Route path="connexion" element={ <Connexion/> } />
+            <Route path="Accueil" element={ <Accueil/> } />
+            <Route path="Connexion" element={ <Connexion/> } />
             <Route path="/" element={ <Dashboard/> } />
             <Route path="recettes" element={ <Recettes/> } />
             <Route path="RDV" element={ <RDV/> } />

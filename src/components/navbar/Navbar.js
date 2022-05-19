@@ -30,7 +30,7 @@ const Navbar = (props) => {
       {
         name: "Recettes",
         value: {
-          icon: <BsEgg size="1.7rem" color="black"/>,
+          icon: <BsEgg size="30px" color="black"/>,
           link: "/recettes",
           color: "black",
           text: "Recettes",
@@ -39,7 +39,7 @@ const Navbar = (props) => {
       {
         name: "RDV",
         value: {
-          icon: <BsCalendarEvent size="1.7rem" color="black"/>,
+          icon: <BsCalendarEvent size="30px" color="black"/>,
           link: "/RDV",
           color: "black",
           text: "RDV",
@@ -48,7 +48,7 @@ const Navbar = (props) => {
       {
         name: "Profil",
         value: {
-          icon: <BsPerson size="1.7rem" color="black"/>,
+          icon: <BsPerson size="30px" color="black"/>,
           link: "/profil",
           color: "black",
           text: "Profil",
@@ -57,13 +57,13 @@ const Navbar = (props) => {
     ];
     switch (props.location) {
       case "Home":
-        icons[0].value.icon= <BsHouse size="1.7rem" color={orange}/>;
+        icons[0].value.icon= <BsHouse size="30px" color={orange}/>;
         break;
       case "Recettes":
-        icons[1].value.icon= <BsEgg size="1.7rem" color={orange}/>;
+        icons[1].value.icon= <BsEgg size="30px" color={orange}/>;
         break;
         case "RDV":
-        icons[2].value.icon= <BsCalendarEvent size="1.7rem" color={orange}/>;
+        icons[2].value.icon= <BsCalendarEvent size="30px" color={orange}/>;
       default:
         break;
     }

@@ -1,0 +1,21 @@
+.textConnexion{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    left: 0;
+}
+
+.textConnexion :first-child{
+    font-size: 12px;
+    margin: 0;
+}
+
+.CGU{
+    margin-top: 0;
+    font-size: 12px;
+    color: #9FD2AA;
+}

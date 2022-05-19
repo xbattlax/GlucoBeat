@@ -1,11 +1,11 @@
 import "../App.css"
-import "./css/Button.css"
+import "./css/button.css"
 
 
 const Button = (props) => {
     return(
-        <button className="btn-primary">
-            <p>{props}</p>
+        <button className={props.color}>
+            <p>{props.text}</p>
         </button>
     );
 };
