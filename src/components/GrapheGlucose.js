@@ -24,7 +24,7 @@ const CustomTooltip = ({ active, payload, label }) => {
         return (
             <div className="custom-tooltip">
                 <p className="intro">{payload[0].value}</p>
-                <p className="label">{`${label}`}</p>
+                <p className="label">{`${payload[0].payload.name}`}</p>
             </div>
         );
     }
