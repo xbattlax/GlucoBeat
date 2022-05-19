@@ -3,7 +3,7 @@ import "./css/card.css"
 
 const CardRDV = (props) => {
     return(
-        <div className="cardImg" style={{backgroundColor: props.color}}>
+        <div className="card" style={{backgroundColor: props.color}}>
             <h1>{props.text}</h1>
             <p>{props.title}</p>
         </div>

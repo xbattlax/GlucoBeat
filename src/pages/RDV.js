@@ -15,7 +15,7 @@ import moment from "moment-timezone";
 //couleurs
 const orange = "#FF8811";
 const blue = "#155A96";
-const green = "#0D7B25";
+const green = "#9FD2AA";
 
 
 const RDV = () => {
@@ -53,12 +53,9 @@ const RDV = () => {
     <>
         <Header pageName="Mes rendez-vous"></Header>
         <Calendar></Calendar>
-        <div className="">
-                {rdv.map(rdv => (
-                    <CardRDV text={rdv.text} title={rdv.dataRdv} color={orange}></CardRDV>
-
-                ))}
-        </div>
+        {rdv.map(rdv => (
+            <CardRDV text={rdv.text} title={rdv.dataRdv} color={green}></CardRDV>
+        ))}
         <Navbar location="RDV"></Navbar>
     </>
     )
