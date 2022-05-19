@@ -3,6 +3,7 @@ import Container from "../components/Container";
 import Header from "../components/Header";
 import Navbar from "../components/navbar/Navbar";
 import Calendar from "../components/Calendar";
+import CardRDV from "../components/CardRDV";
 
 //calendar
 import DatePicker from 'sassy-datepicker';
@@ -52,13 +53,12 @@ const RDV = () => {
     <>
         <Header pageName="Mes rendez-vous"></Header>
         <Calendar></Calendar>
-            <ul>
+        <div className="">
                 {rdv.map(rdv => (
-                    <li>{rdv.text}, {rdv.dataRdv}</li>
+                    <CardRDV text={rdv.text} title={rdv.dataRdv} color={orange}></CardRDV>
 
                 ))}
-            </ul>
-
+        </div>
         <Navbar location="RDV"></Navbar>
     </>
     )

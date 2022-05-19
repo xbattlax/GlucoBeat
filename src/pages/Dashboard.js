@@ -32,7 +32,7 @@ const Dashboard = () => {
                 "date": date
             })
         };
-        fetch('http://13.38.46.102/get_recent_glucose_record', requestOptions)
+        fetch('http://13.38.46.86/get_recent_glucose_record', requestOptions)
             .then(response => response.json())
             .then(data => setGlucose(Math.round(data.data[0].taux)));
 
