@@ -1,5 +1,5 @@
 import "../App.css"
-import "./css/button.css"
+import "./css/Button.css"
 
 
 const Button = (props) => {
