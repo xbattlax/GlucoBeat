@@ -28,8 +28,8 @@ const Calendar = () =>{
                 onSubmit={(model) => addRDV(model, date)}
                 onError={(errors, data) => console.log("error", errors, data)}
             >
-                <TextField name="text" label="text" type="text" />
-                <SubmitField value="Submit" />
+                <TextField name="text" label="Titre :" type="text" />
+                <SubmitField value="Enregistrer" />
             </Form>
         </div>
     )

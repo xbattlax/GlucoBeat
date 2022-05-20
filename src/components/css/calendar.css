@@ -2,6 +2,7 @@
     width: 100%;
     display: flex;
     justify-content: center;
+    flex-direction: column;
 }
 
 .sdp{
@@ -12,4 +13,9 @@
 
 .sdp :focus{
     border: none !important;
+}
+
+.calendar form{
+    margin-bottom: 20px;
+    margin-top: 20px;
 }
