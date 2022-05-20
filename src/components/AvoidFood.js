@@ -29,7 +29,7 @@ const AvoidFood = (props) => {
                         content="img"
                         color={orange}
                         src={soda}
-                        alt="bouteille de lait"
+                        alt="soda"
                     ></Card>
                     <p>Produits laitiers</p>
                 </div>
@@ -38,7 +38,7 @@ const AvoidFood = (props) => {
                         content="img"
                         color={orange}
                         src={burger}
-                        alt="bouteille de lait"
+                        alt="burger"
                     ></Card>
                     <p>Aliments gras</p>
                 </div>
@@ -47,7 +47,7 @@ const AvoidFood = (props) => {
                         content="img"
                         color={orange}
                         src={gelato}
-                        alt="bouteille de lait"
+                        alt="glace"
                     ></Card>
                     <p>Sucre composé</p>
                 </div>
@@ -56,7 +56,7 @@ const AvoidFood = (props) => {
                         content="img"
                         color={orange}
                         src={fries}
-                        alt="bouteille de lait"
+                        alt="frites"
                     ></Card>
                     <p>Féculents</p>
                 </div>
@@ -65,7 +65,7 @@ const AvoidFood = (props) => {
                         content="img"
                         color={lightGreen}
                         src={plus}
-                        alt="bouteille de lait"
+                        alt="ajouter une recett"
                     ></Card>
                 </div>
             </div>

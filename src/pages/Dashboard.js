@@ -5,6 +5,7 @@ import HeaderDash from "../components/HeaderDash";
 import Navbar from "../components/navbar/Navbar";
 import TauxGlucose from "../components/TauxGlucose";
 import moment from "moment-timezone";
+import AddDash from "../components/AddDash"
 import { LineChart, Line } from 'recharts';
 
 import React, { useState,useEffect } from 'react';
@@ -12,10 +13,10 @@ import React, { useState,useEffect } from 'react';
 //Images
 import zigzag from '../images/zigzag.png';
 
+
 //couleurs
 const orange = "#FF8811";
 const blue = "#155A96";
-const green = "#0D7B25";
 
 
 const Dashboard = () => {
@@ -77,7 +78,7 @@ const Dashboard = () => {
             data={taux}
         >
         </GrapheGlucose>
-
+        <AddDash></AddDash>
         <Navbar location="Home"></Navbar>
     </>
     )

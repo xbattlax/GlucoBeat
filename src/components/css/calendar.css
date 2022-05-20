@@ -9,6 +9,7 @@
     width: 100% !important;
     --shadow: none !important;
     --theme-color: #FF8811 !important;
+    padding: 0!important;
 }
 
 .sdp :focus{
