@@ -1,5 +1,4 @@
 import "./css/profilInfo.css"
-
 //images
 import image from "../images/imgConnexion.png";
 

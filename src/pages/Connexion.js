@@ -18,8 +18,7 @@ const blue = "#155A96";
 const green = "#9FD2AA";
 
 
-const Connexion = () => {
-    
+const Connexion = (prop) => {
     return(
     <>
         <HeaderConnexion></HeaderConnexion>

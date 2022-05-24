@@ -4,6 +4,7 @@ import Header from "../components/Header";
 import Navbar from "../components/navbar/Navbar";
 import Calendar from "../components/Calendar";
 import CardRDV from "../components/CardRDV";
+import { useCookies } from 'react-cookie';
 
 //calendar
 import DatePicker from 'sassy-datepicker';
@@ -18,26 +19,23 @@ const blue = "#155A96";
 const green = "#9FD2AA";
 
 
-const RDV = () => {
-    const onChange = (date) => {
-        console.log(date.toString());
-    };
+const RDV = (props) => {
+
     const [rdv, setRdv] = useState([]);
+    const [cookies, setCookie] = useCookies(['access_token']);
 
     useEffect(() => {
         var date = moment().tz("Europe/Paris").format("YYYY-MM-DD HH:mm");
-        console.log(date);
         const requestOptions = {
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({
-                "uuid": "da61fd19-c611-43f6-8c50-4b378b9e9d3e",
+                "uuid": cookies['access_token'],
                 "date": date
             })
         };
         fetch('http://13.38.46.86/get_rdv_records', requestOptions)
             .then(response => response.json())
-
             .then(data => data.data.map(rdv => ({
                 dataRdv: moment(rdv.dateRdv).utc().format("DD-MM HH:mm"),
                 text: rdv.textRdv
@@ -45,10 +43,10 @@ const RDV = () => {
             .then(data => setRdv(data))
 
 
+
         return () => true;
     }, []);
 
-    console.log(rdv);
     return(
     <>
         <Header pageName="Mes rendez-vous"></Header>

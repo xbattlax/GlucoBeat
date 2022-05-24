@@ -14,14 +14,16 @@ import Recettes from "./pages/Recettes";
 import RDV from "./pages/RDV";
 import Accueil from "./pages/Accueil.js";
 import Connexion from "./pages/Connexion.js";
-import Profil from "./pages/Profil";
+import Profil from "./pages/Profil.js";
+import { useCookies } from 'react-cookie';
+
 
 
 export default function App() {
   const dev = true;
-  const [token, setToken] = useState();
+  const [uuid, setUuid] = useState();
   const { pathname } = useLocation();
-
+  const [cookies, setCookie] = useCookies(['access_token', 'user']);
 
   // Setting page scroll to 0 when changing the route
   useEffect(() => {
@@ -29,19 +31,17 @@ export default function App() {
     document.scrollingElement.scrollTop = 0;
   }, [pathname]);
 
-
   const orange = "#FF8811";
   const blue = "#1C6BA4";
   const green = "#0D7B25";
 
   
 
-  if (dev){ 
+  if (cookies['access_token']) {
     return (
         <div className="App">
           <Routes>
             <Route path="Accueil" element={ <Accueil/> } />
-            <Route path="Connexion" element={ <Connexion/> } />
             <Route path="/" element={ <Dashboard/> } />
             <Route path="recettes" element={ <Recettes/> } />
             <Route path="RDV" element={ <RDV/> } />
@@ -49,7 +49,15 @@ export default function App() {
           </Routes>
         </div>
     );
-
   }
+    else {
+      return (
+      <div className="App">
+        <Routes>
+          <Route path="/" element={ <Connexion/> } />
+        </Routes>
+      </div>);
+    }
+
 
 }
