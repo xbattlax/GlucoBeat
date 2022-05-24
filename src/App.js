@@ -16,7 +16,7 @@ import Accueil from "./pages/Accueil.js";
 import Connexion from "./pages/Connexion.js";
 import Profil from "./pages/Profil.js";
 import { useCookies } from 'react-cookie';
-import Profil from "./pages/Profil";
+
 
 
 export default function App() {

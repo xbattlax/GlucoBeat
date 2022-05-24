@@ -23,7 +23,7 @@ const blue = "#155A96";
 const Dashboard = () => {
     const [glucose, setGlucose] = useState(0);
     const [taux, setTaux] = useState([]);
-    const [cookies, setCookie] = useCookies(['access_token']);
+    const [cookies, setCookie] = useCookies(['access_token', 'user']);
 
     useEffect(() => {
         var date = moment().tz("Europe/Paris").format("YYYY-MM-DD HH:mm");
@@ -64,7 +64,7 @@ const Dashboard = () => {
 
     return(
     <>
-        <HeaderDash name="Damien"></HeaderDash>
+        <HeaderDash name={cookies['user']['name']}></HeaderDash>
         <TauxGlucose
             title="Votre taux de glucose :"
             content="cardDash" 

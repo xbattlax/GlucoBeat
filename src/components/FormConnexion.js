@@ -34,7 +34,6 @@ const FormConnexion = () => {
         expires.setTime(expires.getTime() + (60*60*1000));
         setCookie('access_token', data['data'].id, { path: '/',  expires});
         setCookie('user', data.data, { path: '/',  expires});
-        console.log(cookies['user']);
     }
 
     async function login(model, stateChanger){

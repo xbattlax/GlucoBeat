@@ -18,7 +18,6 @@ const loginSchema = new Schema({
 const Calendar = () =>{
     const [date, setDate] = useState(new Date());
     const [cookies, setCookie] = useCookies(['access_token']);
-    console.log(cookies['access_token']);
     const onChange = newDate => {
         var date = moment(newDate).tz("Europe/Paris").format("YYYY-MM-DD HH:mm");
         setDate(date);
@@ -51,7 +50,6 @@ function addRDV(text, date,uuid){
     };
     fetch('http://13.38.46.86/add_rdv', requestOptions)
         .then(response => response.json())
-        .then(data => console.log(data))
 }
 
 export default Calendar;

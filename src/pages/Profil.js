@@ -7,7 +7,8 @@ import ImgConnexion from "../components/ImgConnexion";
 import Button from "../components/Button";
 import TextConnexion from "../components/TextConnexion";
 import React from "react";
-
+import { useCookies } from 'react-cookie';
+import ProfilInfo from "../components/ProfilInfo";
 
 
 //Images
@@ -19,27 +20,14 @@ const blue = "#155A96";
 const green = "#9FD2AA";
 
 
-const Accueil = () => {
-
-    return(
-        <>
-            <Button color={"orange"} logout={true} text={"logout"}/>
-            <Navbar location="Profil"></Navbar>
-        </>
-    )
-};
-export default Accueil;
-
-import ProfilInfo from "../components/ProfilInfo";
-
-
 
 const Profil = () => {
-    
+    const [cookies, setCookie] = useCookies(['access_token', 'user']);
+
     return(
     <>
         <Header pageName="Profil"></Header>
-        <ProfilInfo username="Damien Chartier"></ProfilInfo>
+        <ProfilInfo username={cookies['user']['name'] + ' ' + cookies['user']['surname']}></ProfilInfo>
         <Navbar location="Profil"></Navbar>
     </>
     )
