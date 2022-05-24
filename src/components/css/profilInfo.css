@@ -1,0 +1,10 @@
+.profilContainer{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.profilInfo{
+    display: flex;
+    justify-content: center;
+}
+

@@ -14,6 +14,7 @@ import Recettes from "./pages/Recettes";
 import RDV from "./pages/RDV";
 import Accueil from "./pages/Accueil.js";
 import Connexion from "./pages/Connexion.js";
+import Profil from "./pages/Profil";
 
 
 export default function App() {
@@ -44,6 +45,7 @@ export default function App() {
             <Route path="/" element={ <Dashboard/> } />
             <Route path="recettes" element={ <Recettes/> } />
             <Route path="RDV" element={ <RDV/> } />
+            <Route path="Profil" element={ <Profil/> } />
           </Routes>
         </div>
     );

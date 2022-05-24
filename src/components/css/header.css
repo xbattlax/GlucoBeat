@@ -2,8 +2,3 @@
     display: flex;
     justify-content: center;
 }
-
-.retourImg{
-    position: absolute;
-    left: 1rem;
-}
