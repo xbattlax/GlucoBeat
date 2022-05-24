@@ -16,13 +16,14 @@ import Accueil from "./pages/Accueil.js";
 import Connexion from "./pages/Connexion.js";
 import Profil from "./pages/Profil.js";
 import { useCookies } from 'react-cookie';
+import Profil from "./pages/Profil";
 
 
 export default function App() {
   const dev = true;
   const [uuid, setUuid] = useState();
   const { pathname } = useLocation();
-  const [cookies, setCookie] = useCookies(['access_token'])
+  const [cookies, setCookie] = useCookies(['access_token', 'user']);
 
   // Setting page scroll to 0 when changing the route
   useEffect(() => {

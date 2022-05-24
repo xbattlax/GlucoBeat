@@ -15,7 +15,6 @@ const green = "#0D7B25";
 const HeaderDash = (props) => {
     return(
         <div className="header">
-            <img className="retourImg" src={arrow} alt="retour en arrière"></img>
             <h1>{props.pageName}</h1>
         </div>
     );

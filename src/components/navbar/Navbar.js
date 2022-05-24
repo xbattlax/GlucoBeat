@@ -62,8 +62,12 @@ const Navbar = (props) => {
       case "Recettes":
         icons[1].value.icon= <BsEgg size="30px" color={orange}/>;
         break;
-        case "RDV":
+      case "RDV":
         icons[2].value.icon= <BsCalendarEvent size="30px" color={orange}/>;
+        break;
+      case "Profil":
+        icons[3].value.icon= <BsPerson size="30px" color={orange}/>;
+        break;
       default:
         break;
     }
