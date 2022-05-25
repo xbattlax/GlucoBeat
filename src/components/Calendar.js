@@ -48,7 +48,7 @@ function addRDV(text, date,uuid){
             "textRdv": text.text
         })
     };
-    fetch('http://13.38.46.86/add_rdv', requestOptions)
+    fetch('http://'+process.env.REACT_APP_API_URI+'/add_rdv', requestOptions)
         .then(response => response.json())
 }
 
