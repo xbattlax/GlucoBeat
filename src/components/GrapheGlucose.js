@@ -20,7 +20,7 @@ const GrapheGlucose = (props) => {
 };
 
 const CustomTooltip = ({ active, payload, label }) => {
-    if (active) {
+    if (active && payload && payload.length > 0) {
         return (
             <div className="custom-tooltip">
                 <p className="intro">{payload[0].value}</p>

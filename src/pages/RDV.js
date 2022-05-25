@@ -34,7 +34,7 @@ const RDV = (props) => {
                 "date": date
             })
         };
-        fetch('http://13.38.46.86/get_rdv_records', requestOptions)
+        fetch('http://'+process.env.REACT_APP_API_URI+'/get_rdv_records', requestOptions)
             .then(response => response.json())
             .then(data => data.data.map(rdv => ({
                 dataRdv: moment(rdv.dateRdv).utc().format("DD-MM HH:mm"),

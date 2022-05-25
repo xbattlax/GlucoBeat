@@ -27,7 +27,7 @@ const Profil = () => {
     return(
     <>
         <Header pageName="Profil"></Header>
-        <ProfilInfo username="Damien Chartier"></ProfilInfo>
+        <ProfilInfo username={cookies['user']['name'] + ' ' + cookies['user']['surname']}></ProfilInfo>
         <div className="cardContainer">
             <ProfilCard
                 color={lightGreen}
@@ -49,7 +49,6 @@ const Profil = () => {
             logout = {true}
             text = "Déconnexion"
         ></Button>
-        <ProfilInfo username={cookies['user']['name'] + ' ' + cookies['user']['surname']}></ProfilInfo>
         <Navbar location="Profil"></Navbar>
     </>
     )   
