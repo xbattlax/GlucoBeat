@@ -29,11 +29,17 @@ const FormConnexion = () => {
         </Form>
     );
 
-    function cookie(data) {
+    async function cookie(data) {
         let expires = new Date();
         expires.setTime(expires.getTime() + (60*60*1000));
-        setCookie('access_token', data['data'].id, { path: '/',  expires});
-        setCookie('user', data.data, { path: '/',  expires});
+        try {
+            await setCookie('user', data.data, {path: '/', expires});
+            await setCookie('access_token', data['data'].id, {path: '/', expires});
+            window.location.href = '/';
+        } catch (error) {
+            console.log(error);
+        }
+
     }
 
     async function login(model, stateChanger){
@@ -48,7 +54,7 @@ const FormConnexion = () => {
         fetch('http://'+process.env.REACT_APP_API_URI+'/login', requestOptions)
             .then(response => response.json())
             .then(data => cookie(data))
-            .catch(error => console.log('error', error));
+            .then(() => console.log("cookie"));
     }
 };
 
