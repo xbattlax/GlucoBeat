@@ -32,9 +32,13 @@ const FormConnexion = () => {
     async function cookie(data) {
         let expires = new Date();
         expires.setTime(expires.getTime() + (60*60*1000));
-
-        await setCookie('access_token', data['data'].id, { path: '/',  expires});
-        await setCookie('user', data.data, { path: '/',  expires});
+        try {
+            await setCookie('user', data.data, {path: '/', expires});
+            await setCookie('access_token', data['data'].id, {path: '/', expires});
+            window.location.href = '/';
+        } catch (error) {
+            console.log(error);
+        }
 
     }
 
