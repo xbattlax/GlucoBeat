@@ -6,6 +6,7 @@
     background-color: #9FD2AA;
     border-radius: 12px;
     box-shadow: 0px 6px 12px -6px #000000;
+    cursor: pointer;
 }
 
 .orange{
@@ -16,6 +17,7 @@
     background-color: #FF8811;
     border-radius: 12px;
     box-shadow: 0px 6px 12px -6px #000000;
+    cursor: pointer;
 }
 
 .orange, .green > p{

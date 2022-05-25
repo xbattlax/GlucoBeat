@@ -61,7 +61,6 @@ const Dashboard = () => {
 
         return () => true;
     }, []);
-
     return(
     <>
         <HeaderDash name={cookies['user']['name']}></HeaderDash>

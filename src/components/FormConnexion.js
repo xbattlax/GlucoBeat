@@ -23,17 +23,17 @@ const FormConnexion = () => {
             onSubmit={model => login(model)}
             onError={(errors, data) => console.log('error', errors, data)}
         >
-            <TextField name="login" label="Email :" type="text" />
-            <TextField name="password" label="Password :" type="text" />
-            <SubmitField value="Submit" />
+            <TextField name="login" label="Identifiant :" type="text" />
+            <TextField name="password" label="Mot de passe" type="password" />
+            <SubmitField value="Connexion" />
         </Form>
     );
 
-    function cookie(data) {
+    async function cookie(data) {
         let expires = new Date();
         expires.setTime(expires.getTime() + (60*60*1000));
-        setCookie('access_token', data['data'].id, { path: '/',  expires});
-        setCookie('user', data.data, { path: '/',  expires});
+        await setCookie('user', data.data, { path: '/',  expires});
+        await setCookie('access_token', data['data'].id, { path: '/',  expires});
     }
 
     async function login(model, stateChanger){
